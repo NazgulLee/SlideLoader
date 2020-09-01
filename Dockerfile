@@ -1,3 +1,6 @@
+ENV http_proxy http://172.17.95.63:3128
+ENV https_proxy http://172.17.95.63:3128
+
 FROM python:3-stretch
 
 WORKDIR /var/www
