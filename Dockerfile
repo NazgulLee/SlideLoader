@@ -4,6 +4,7 @@ WORKDIR /var/www
 
 ENV http_proxy http://172.17.95.63:3128
 ENV https_proxy http://172.17.95.63:3128
+RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak && mv sources.list /etc/apt/
 
 RUN apt-get update
 RUN apt-get -q update --fix-missing
