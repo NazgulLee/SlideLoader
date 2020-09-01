@@ -1,9 +1,10 @@
-ENV http_proxy http://172.17.95.63:3128
-ENV https_proxy http://172.17.95.63:3128
-
 FROM python:3-stretch
 
 WORKDIR /var/www
+
+ENV http_proxy http://172.17.95.63:3128
+ENV https_proxy http://172.17.95.63:3128
+
 RUN apt-get update
 RUN apt-get -q update --fix-missing
 RUN apt-get -q install -y openslide-tools python-openslide vim
